@@ -1,11 +1,9 @@
 ### Hi, my name is Sajad Jalilian
 #### I'm trying to be a good software developer :)
-I am interested in backend development. Python / C#
+I am interested in backend development. DotNet / C#
 
 
 You can find me here:
-- [My Blog](https://sajadjalilian.blogspot.com) / [mirror](https://medium.com/@SajadJ)
--  [وبلاگ فارسی من](https://sajadjalilian-fa.blogspot.com)  /  [mirror](https://virgool.io/@SajadJ)
 - [twitter](https://twitter.com/Sajad_Jalilian)
 - [linkedin](https://linkedin.com/in/sajadjalilian)
 - [github](https://github.com/SajadJalilian)
