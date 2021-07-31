@@ -4,6 +4,8 @@ I am interested in backend development. DotNet / C#
 
 
 You can find me here:
+- [My Blog](https://sajadjalilian.wordpress.com) / [Medium mirror](https://medium.com/@SajadJ)
+- [وبلاگ فارسی](https://virgool.io/@SajadJ)
 - [twitter](https://twitter.com/Sajad_Jalilian)
 - [linkedin](https://linkedin.com/in/sajadjalilian)
 - [github](https://github.com/SajadJalilian)
