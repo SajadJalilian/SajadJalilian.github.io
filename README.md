@@ -1,6 +1,6 @@
 ### Hi, my name is Sajad Jalilian
 #### I'm trying to be a good software developer :)
-I am interested in backend development. DotNet / C#
+I am interested in backend development. Golang - DotNet / C#
 
 
 You can find me here:
