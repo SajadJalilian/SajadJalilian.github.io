@@ -2,7 +2,7 @@
 
 I'm trying to be a good software developer :) I am interested in backend development. Golang - DotNet / C#
 
-[Checkout my CV](http://github.com/SajadJalilian/SajadJalilian.github.io/blob/master/cv.md)
+[Checkout my CV](/cv.md)
 
 You can find me here:
 
