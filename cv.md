@@ -10,8 +10,6 @@
 
 I’m an old-time geek! I love programming and creating web applications. I Try to write code for humans, machines eventually will understand it anyway!! I believe in minimalism in life and code, Less is better.
 
-[Checkout my CV](http://github.com/SajadJalilian/SajadJalilian.github.io/blob/master/cv.md)
-
 ### Skills & Endorsements
 
 My main focus is the **Golang** tech stack and Cloud Infrastructure. I don’t have much production experience with Golang, but I can get to speed quickly. I did it before with c#; it’s really exciting for me.
