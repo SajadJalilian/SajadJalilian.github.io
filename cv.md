@@ -2,7 +2,7 @@
 
 ## Backend Developer
 
-| +98 9375515339 | sajadjalilian88@gmail.com |
+| +98 9375515339 | sajadjalilian88 [at] gmail [dot] com |
 
 | [linkedin.com/in/sajadjalilian](http://linkedin.com/in/sajadjalilian) | [sajadjalilian.github.io](http://sajadjalilian.github.io) |
 
