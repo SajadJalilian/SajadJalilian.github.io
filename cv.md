@@ -10,9 +10,7 @@
 
 I’m an old-time geek! I love programming and creating web applications. I Try to write code for humans, machines eventually will understand it anyway!! I believe in minimalism in life and code, Less is better.
 
-### Skills & Endorsements
-
-My main focus is the **Golang** tech stack and Cloud Infrastructure. I don’t have much production experience with Golang, but I can get to speed quickly. I did it before with c#; it’s really exciting for me.
+## Skills & Endorsements
 
 ### General Software Development
 
@@ -39,6 +37,8 @@ Lots of soft-skill, and best practices :) - Agile Methodologies - Critical think
 I am a part of the Business Intelligence and Content Management System team.
 As a developer in the BI team, we provide raw data for BI Specialists to do magic on it.
 Our Team also develops CMS for the company and our subset pharmacies. We help them manage all sorts of content around medicine and health care.
+
+We use microservices to integrate all parts of the company systems together and stay agile at the same time.
 
 ### .Net Backend Developer
 
