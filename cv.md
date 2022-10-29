@@ -28,7 +28,7 @@ C# - DotNet - ASP.NET - Python - Django/DRF - JavaScript - HTML - CSS
 
 ### Non-Technical
 
-Lots of soft-skill, and best practices :) - Agile Methodologies - Critical thinking
+Soft-skill and being good with people - Agile Methodologies - Critical thinking
 
 ## Experience
 
