@@ -18,13 +18,17 @@ I'm interested in the whole web application development life cycle; from small a
 
 Design Patterns - SOLID/KISS/YAGNI - Microservices - RESTful WebServices - MVC
 
+### DotNet Ecosystem and tools
+
+C# - ASP.NET - Entity Framework - MediatR - MassTransit - HangFire - Ocelot - FluentValidation amd more...
+
 ### Tools I work with
 
 Linux - Version Control(Git) - Containerization(Docker) - SQL - RDBMS(PostgreSQL - SQL Server - MySQL) - ORM - In-Memory cache(Redis) - Message-Bus - Message-Broker - Logging(Graylog - Sentry) - Task scheduling(BackgroundService) - CI/CD(GitHub - GitLab - Azure DevOps)
 
 ### I also worked with
 
-C# - DotNet - ASP.NET - Python - Django/DRF - JavaScript - HTML - CSS
+Python - Django/DRF - JavaScript - HTML - CSS
 
 ### Non-Technical
 
@@ -32,7 +36,7 @@ Soft-skill and being good with people - Agile Methodologies - Critical thinking
 
 ## Experience
 
-### .Net Backend Developer
+### DotNet Backend Developer
 
 #### *BlueBitSoft / Jul 2021* – Present
 
@@ -42,7 +46,7 @@ Our Team also develops CMS for the company and our subset pharmacies. We help th
 
 We use microservices to integrate all parts of the company systems together and stay agile at the same time.
 
-### .Net Backend Developer
+### DotNet Backend Developer
 
 #### *Paaydar Smart Network* / Apr 2021 – Jun 2021
 
