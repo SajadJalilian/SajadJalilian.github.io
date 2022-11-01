@@ -40,14 +40,13 @@ Soft-skill and being good with people - Agile Methodologies - Critical thinking
 
 #### *BlueBitSoft / Jul 2021* – Present
 
-Our company operates in the Netherlands and Germany.
-
 We use microservices to integrate all parts of the company systems together and stay agile at the same time.
 
 I am a part of the Business Intelligence and Content Management System team.
 As a developer in the BI team, we provide raw data for BI Specialists to do magic on it.
 Our Team also develops CMS for the company and our subset pharmacies. We help them manage all sorts of content around medicine and health care.
 
+Our company operates in the Netherlands and Germany.
 ### DotNet Backend Developer
 
 #### *Paaydar Smart Network* / Apr 2021 – Jun 2021
