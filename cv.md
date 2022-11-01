@@ -61,7 +61,7 @@ I worked on the Iranian calendar service for business, during my work we added s
 #### *Arsh / Sep 2020* – Jan 2021
 
 I was in charge of refactoring and migrating the internal HR system from Python version 2 to 3, Django 1.11 to the latest and preparing for the next LTS version.
-Python 3 had significant breaking changes, we had to refactor the majority of the code-base to migrate to dotnet 3.
+Python 3 had significant breaking changes, we had to refactor the majority of the code-base to migrate to python 3.
 
 ## Education
 
