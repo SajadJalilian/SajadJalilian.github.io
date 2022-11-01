@@ -73,10 +73,6 @@ Associate Computer Hardware Engineering / 2010 – 2012
 
 Clean Survey app using "Onion Architecture" DotNet/ASP.NET and C#
 
-### [Django_blog](https://github.com/SajadJalilian/django_blog)
-
-Blogging CMS with Django and Django REST Framework API
-
 ## Language
 
 English ●●●○
