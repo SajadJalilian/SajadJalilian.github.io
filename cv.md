@@ -42,9 +42,10 @@ Soft-skill and being good with people - Agile Methodologies - Critical thinking
 
 We use microservices to integrate all parts of the company systems together and stay agile at the same time.
 
-I am a part of the Business Intelligence and Content Management System team.
-As a developer in the BI team, we provide raw data for BI Specialists to do magic on it.
-Our Team also develops CMS for the company and our subset pharmacies in the Netherlands and Germany. We help them manage all sorts of content around medicine and health care.
+Our team is responsible for several microservices.
+We develop CMS for the company and our subset pharmacies in the Netherlands and Germany. We help them manage all sorts of content around medicine and health care.
+A client report is another service we work on, patients can follow the prescriptions from the start of the process in the pharmacy until delivery at their home or other pickup stations.
+We also provide raw data for BI Specialists to do magic on it; we send daily reports to pharmacies; etc...
 
 ### DotNet Backend Developer
 
