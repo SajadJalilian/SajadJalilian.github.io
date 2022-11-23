@@ -20,6 +20,6 @@ You can find me here:
 
 - Skype Name: [live:.cid.6f7f4279bdfa349a](https://join.skype.com/invite/N53jlo9oP3vK)
 - Microsoft Teams: sajadjalilian88 [at] hotmail [dot] com
-- [Telegram](https://t.me/sajadjalilian)
+- Telegram: [sajadjalilian](https://t.me/sajadjalilian)
 - Discord id: Sajad_Jalilian#7552
 - e mail/ google meet: sajadjalilian88 [at] gmail [dot] com
