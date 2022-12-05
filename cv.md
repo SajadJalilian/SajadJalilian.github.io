@@ -47,11 +47,18 @@ We develop CMS for the company and our subset pharmacies in the Netherlands and 
 A client report is another service we work on, patients can follow the prescriptions from the start of the process in the pharmacy until delivery at their home or other pickup stations.
 We also provide raw data for BI Specialists to do magic on it; we send daily reports to pharmacies; etc...
 
+I introduced distributed caching in the system via external Redis. I started R&D about the implementation and tested several caching strategies; our response time with the usage of cache lowered to less than 200 milliseconds.
+
+I refactored our queries to the database and reduced the number of Joins that were used to improve performance; request response time got 15 fold better.
+
+I created an "automatic sitemap generator" library for CMS which creates a sitemap for all of our URLs periodically to use in SEO improvements.
+
 ### DotNet Backend Developer
 
 #### *Paaydar Smart Network* / Apr 2021 – Jun 2021
 
 I was working on internal financial systems. Our system handled thousands of sales daily and calculated profits, commissions, etc...
+The company had a selling website that included about 2 million users and covered 40,000 small businesses.
 
 ### Python Backend Developer
 
