@@ -4,8 +4,6 @@ I’m an old-time geek who loves programming. I Try to write code for humans; ma
 
 Before anything, I consider myself a valuable tool to solve problems; It doesn't matter what kind of problems I face; I will find the most reasonable solution for it, sooner or later.
 
-[Checkout my CV](https://docs.google.com/document/d/1Ora0BHxnr5tIOO2hEpyL08xoYTx5_glb4m4GRz4riks/edit?usp=sharing)
-
 You can find me here:
 
 - [Medium Blog](https://medium.com/@SajadJ)
