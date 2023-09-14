@@ -1,10 +1,36 @@
 baseURL = 'http://sajadjalilian.github.io/'
 languageCode = 'en-us'
-title = 'Sajad Jalilian'
+title = 'SJ blog'
+author = 'Sajad Jalilian'
 theme = 'hugo-paper'
+paginate = 5
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
+# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
+ignoreErrors = ["error-remote-getjson"]
 
 [params]
   twitter = 'Sajad_Jalilian'
   github = 'SajadJalilian'
   linkedin = 'sajadjalilian'
   rss = true
+
+# needed to  render raw HTML (e.g. <sub>, <sup>, <kbd>, <mark>)
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 10
