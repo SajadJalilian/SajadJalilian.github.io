@@ -1,6 +1,7 @@
 ---
 title: "My Journey Through Python Virtual Environments"
 date: 2020-10-20T19:05:13+03:30
+tags: ["python"]
 ---
 
 Since I started programming in python, I was fine using its standard library tool ‘venv’ for all of my work. You can create venv like this:

@@ -1,6 +1,7 @@
 ---
 title: "Take on Distributed Caching"
 date: 2022-07-07T19:13:49+03:30
+tags: ["csharp", "cache"]
 ---
 ## Should I use Distributed Caching?
 
@@ -81,7 +82,7 @@ It’s pretty straightforward; depending on your catching strategy while writing
 Example of using cache in service:
 
 ``` csharp
-
+jk
 public async Task<int> CountByFilterAsync(ContentFilter filter)
 {
     // Get cache
