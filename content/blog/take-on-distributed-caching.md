@@ -80,8 +80,26 @@ It’s pretty straightforward; depending on your catching strategy while writing
 
 Example of using cache in service:
 
-``` bash
-public async Task<int> CountByFilterAsync(ContentFilter filter)        {            // Get cache            var cacheKey = _prefixKey + "-CountByFilterAsync-" + filter;            if (CacheHelper.IsEnabled(_cacheRepositoryOptions))            {                var cached = await _redisCacheEngine.GetAsync<int>(cacheKey);                if (cached != null && cached != 0) return cached;            }            var query = _queryableDbSet;            query = query.ApplyFilter(filter);            var count = await query.CountAsync();            // Set cache            if (CacheHelper.IsEnabled(_cacheRepositoryOptions))                await _redisCacheEngine.SetAsync(cacheKey, count, _ttlFromMinutes);            return count;        }
+``` csharp
+
+public async Task<int> CountByFilterAsync(ContentFilter filter)
+{
+    // Get cache
+    var cacheKey = _prefixKey + "-CountByFilterAsync-" + filter;
+    if (CacheHelper.IsEnabled(_cacheRepositoryOptions))
+    {
+        var cached = await _redisCacheEngine.GetAsync<int>(cacheKey);
+        if (cached != null && cached != 0) return cached;
+    }
+    var query = _queryableDbSet;
+    query = query.ApplyFilter(filter);
+    var count = await query.CountAsync();
+    // Set cache
+    if (CacheHelper.IsEnabled(_cacheRepositoryOptions))
+        await _redisCacheEngine.SetAsync(cacheKey, count, _ttlFromMinutes);
+    return count;
+}
+
 ```
 
 It depends on your design to choose where to implement cache, my favorite approach is leveraging the [CQRS pipeline,](https://codewithmukesh.com/blog/caching-with-mediatr-in-aspnet-core/) to set Cache in Query requests and invalidate the Cache in Command requests.
