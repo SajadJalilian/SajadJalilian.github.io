@@ -1,5 +1,5 @@
 ---
-title: "C# Concurrency: a note to myself."
+title: "C# Concurrency: a note to myself"
 date: 2023-09-22T10:37:05+03:30
 tags: ["csharp", "concurrency"]
 ---
@@ -8,9 +8,7 @@ In this article, I will briefly discuss the most important things to know about 
 
 ## Concurrency vs. Parallelism
 
-> A system is said to be concurrent if it can support two or more actions in progress at the same time. A system is said to be parallel if it can support two or more actions executing simultaneously.
-
-The Art of Concurrency book
+> A system is said to be concurrent if it can support two or more actions in progress at the same time. A system is said to be parallel if it can support two or more actions executing simultaneously. - The Art of Concurrency book
 
 To make breakfast, one person can boil eggs, make tea, and toast the bread at the same time. However, he/she cannot drive to the grocery store and come back simultaneously. In order to make breakfast and buy groceries in parallel, you need at least two people.
 
