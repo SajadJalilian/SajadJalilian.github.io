@@ -39,3 +39,8 @@ ignoreErrors = ["error-remote-getjson"]
     name = "Contact"
     url = "/contact/"
     weight = 10
+  [[menu.main]]
+    identifier = "persian"
+    name = "فارسی"
+    url = "/persian/"
+    weight = 10
