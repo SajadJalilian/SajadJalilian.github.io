@@ -42,8 +42,8 @@
     @apply !transition-none;
   }
 
-  .highlight tr {
-    border-bottom-width: 0;
+  .prose {
+    @apply break-words;
   }
 
   .btn-menu::before,
@@ -75,14 +75,51 @@
     @apply text-lg leading-[1.8] text-black dark:text-white;
   }
 
-  article pre:not(blockquote pre) {
-    @apply -mx-8 !p-8 shadow;
+  article blockquote {
+    @apply !border-l-[3px] !border-black dark:!border-white;
   }
 
-  article blockquote {
-    padding-left: calc(theme('space.8') - 3px) !important;
-    margin-left: calc(theme('space.8') * -1) !important;
+  article code {
+    @apply inline-block !text-sm !leading-6;
+  }
 
-    @apply !border-black dark:!border-white;
+  article .highlight {
+    @apply my-8;
+  }
+
+  article .highlight pre {
+    @apply my-0;
+  }
+
+  article .highlight > div {
+    @apply rounded-md bg-[--tw-prose-pre-bg];
+  }
+
+  article .highlight > div table {
+    @apply my-0 table-fixed;
+  }
+
+  article .highlight > div table tr {
+    @apply flex;
+  }
+
+  article .highlight > div table tr td {
+    @apply p-0;
+  }
+
+  article .highlight > div table tr td pre {
+    @apply !bg-transparent;
+  }
+
+  article .highlight > div table tr td:first-of-type pre {
+    @apply pr-[4px];
+  }
+
+  article .highlight > div table tr td:first-of-type pre code span {
+    @apply !mr-0 block min-w-[18px] !p-0 text-right text-white/40;
+  }
+
+  article .highlight > div table tr td:last-of-type {
+    @apply overflow-auto;
   }
 }
