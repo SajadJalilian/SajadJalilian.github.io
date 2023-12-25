@@ -44,3 +44,14 @@ ignoreErrors = ["error-remote-getjson"]
     name = "فارسی"
     url = "/fa-blog/"
     weight = 10
+
+
+# giscus
+[params.giscus]
+  repo = 'SajadJalilian/SajadJalilian.github.io'                 # see https://giscus.app for more details
+  repoId = 'MDEwOlJlcG9zaXRvcnkxNjQzNDY3NDE'
+  category = 'Announcements'
+  categoryId = 'DIC_kwDOCcu7dc4Cb_N2'
+  mapping = 'pathname'
+  theme = 'light'
+  lang = 'en'
