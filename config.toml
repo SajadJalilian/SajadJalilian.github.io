@@ -40,7 +40,7 @@ ignoreErrors = ["error-remote-getjson"]
     url = "/contact/"
     weight = 10
   [[menu.main]]
-    identifier = "persian"
+    identifier = "fa-blog"
     name = "فارسی"
-    url = "/persian/"
+    url = "/fa-blog/"
     weight = 10
