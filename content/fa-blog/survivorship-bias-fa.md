@@ -10,7 +10,7 @@ tags: ["persian"]
 
 تعداد زیادی از هواپیماهای به شدت آسیب دیده بررسی شدن و طرح جالبی از نقاطی که آسیب دیده بودند درست شد. نتیجه‌ی نهایی شبیه تصویر پایین بود.
 
-![plane damaged bt bullets ]({{ < ref "/content/assets/images/plane-damaged-by-bullets.webp" > }})
+![plane damaged bt bullets ]({{ < ref "/assets/images/plane-damaged-by-bullets.webp" > }})
 
 در نگاه اول به نظر واضح بود که کدام قسمت‌های هواپیما رو باید تقویت کنند، اما اینجا بود که مردی به نام «آبراهام ولد» Abraham Wald وارد شد و یک نکته‌ی خیلی مهم رو مطرح کرد.
 
