@@ -2,6 +2,7 @@
 title: "C# Concurrency: a note to myself"
 date: 2023-09-22T10:37:05+03:30
 tags: ["csharp", "concurrency"]
+type: "en"
 ---
 
 In this article, I will briefly discuss the most important things to know about concurrency in C#.

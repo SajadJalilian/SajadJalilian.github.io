@@ -2,6 +2,7 @@
 title: "Take on Distributed Caching"
 date: 2022-07-07T19:13:49+03:30
 tags: ["csharp", "cache"]
+type: "en"
 ---
 ## Should I use Distributed Caching?
 
