@@ -30,20 +30,25 @@ ignoreErrors = ["error-remote-getjson"]
 [menu]
 
   [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/en-blog/"
+    weight = 10
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 10
+    weight = 12
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
     url = "/contact/"
-    weight = 10
+    weight = 13
   [[menu.main]]
     identifier = "fa-blog"
     name = "فارسی"
     url = "/fa-blog/"
-    weight = 10
+    weight = 20
 
 
 # giscus
