@@ -60,3 +60,7 @@ ignoreErrors = ["error-remote-getjson"]
   mapping = 'pathname'
   theme = 'light'
   lang = 'en'
+
+[services]
+  [services.googleAnalytics]
+    ID = 'G-J5QDV547XJ'
