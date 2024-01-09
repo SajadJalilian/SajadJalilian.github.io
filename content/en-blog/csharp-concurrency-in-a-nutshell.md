@@ -1,5 +1,5 @@
 ---
-title: "C# Concurrency: a note to myself"
+title: "C# Concurrency in a nutshell"
 date: 2023-09-22T10:37:05+03:30
 tags: ["csharp", "concurrency"]
 type: "en"
