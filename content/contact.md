@@ -7,9 +7,8 @@ layout: "single"
 ### You can contact me using this methods
 
 - [Schedule a meeting with me](https://tidycal.com/sajadjalilian)
-- e mail/ google meet: sajadjalilian88 [at] gmail [dot] com
+- e mail/ google meet: sajadjdev [at] gmail [dot] com
 - Telegram: [sajadjalilian](https://t.me/sajadjalilian)
-- Microsoft Teams: sajadjalilian88 [at] hotmail [dot] com
 - Skype Name: [live:.cid.6f7f4279bdfa349a](https://join.skype.com/invite/N53jlo9oP3vK)
 - Discord id: sajad_jalilian
 
