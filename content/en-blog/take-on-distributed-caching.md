@@ -83,7 +83,6 @@ It’s pretty straightforward; depending on your catching strategy while writing
 Example of using cache in service:
 
 ``` csharp
-jk
 public async Task<int> CountByFilterAsync(ContentFilter filter)
 {
     // Get cache
