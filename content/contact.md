@@ -1,18 +1,15 @@
 ---
 title: "Contact"
-Description: "Making the Complex Simple and Easy to Understand!"
+Description: "Get in touch with Sajad Jalilian"
 layout: "single"
 ---
 
-### You can contact me using this methods
+#### You can contact me using these methods
 
-- [Schedule a meeting with me](https://tidycal.com/sajadjalilian)
+I have ordered them based on how often I check them.
+
+- Telegram: @ sajadjalilian
+- [Linkedin](https://www.linkedin.com/in/sajadjalilian)
 - e mail/ google meet: sajadjdev [at] gmail [dot] com
-- Telegram: [sajadjalilian](https://t.me/sajadjalilian)
-- Skype Name: [live:.cid.6f7f4279bdfa349a](https://join.skype.com/invite/N53jlo9oP3vK)
-- Discord id: sajad_jalilian
-
-### I also write on these blogs
-
-- [This blog mirror on Medium](https://medium.com/@SajadJ)
-- [وبلاگ فارسی](https://virgool.io/@SajadJ)
+- [twitter/x](https://twitter.com/Sajad_Jalilian)
+- [Schedule a meeting with me](https://tidycal.com/sajadjalilian)
