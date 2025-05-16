@@ -4,85 +4,78 @@ date: 2022-07-07T19:13:49+03:30
 tags: ["csharp", "cache"]
 type: "en"
 ---
-## Should I use Distributed Caching?
+
+# Should I Use Distributed Caching?
 
 ## Don’t
 
-The best strategy to use distributed cache is not to use it!
+The best strategy for distributed caching is often not to use it!
 
-It’s hard to do and adds complexity to your system; as all of us know, complexity is the source of all evils in software development.
+It’s challenging to implement and adds complexity to your system. As we all know, complexity is the root of most problems in software development.
 
-So please don’t use it.
+So, avoid it if possible.
 
-First, you can focus on optimizing your application, database, connection, network, or even hardware. And use In-Memory Cache instead.
+Before considering distributed caching, focus on optimizing your application, database, connection, network, or even hardware. Use in-memory caching instead.
 
 ## Use In-Memory Caching
 
-But you have to consider using a cache to speed things up at some point. So it would be best if you first consider using whatever internal in-memory cache your back-end framework introduces, use database caching, etc.
+At some point, you’ll need to consider caching to improve performance. Start by leveraging the internal in-memory caching mechanisms provided by your back-end framework, database caching, etc.
 
-Believe it or not, every tool you use has its caching providers internally, and you can leverage them.
+Believe it or not, most tools have built-in caching providers you can utilize.
 
-Most of the time, you can make your app significantly faster by doing just these things and avoiding adding complexity to your system.
+In many cases, these simple optimizations can significantly improve your application's performance without the added complexity of distributed caching.
 
 ## Distributed Caching Strategies
 
-Again another BUT!
+### When to Use Distributed Caching
 
-But at some point, when your user base grows, you need to think about caching more seriously. This means you want to add a dedicated caching server or even more complex distributed caching to your system.
+However, as your user base grows, you might need to take caching more seriously. This could mean adding a dedicated caching server or implementing a more complex distributed caching system.
 
-## Understand your workload
+## Understand Your Workload
 
-To do caching correctly, you need to understand your application responsibilities and requirements.
+To implement caching effectively, you must thoroughly understand your application’s responsibilities and requirements.
 
-To choose caching pattern, you need to know your workload. For example, your application may be write-heavy, read-heavy, real-time, etc.
+Choosing the right caching pattern depends on your workload. For example, is your application write-heavy, read-heavy, or real-time?
 
-## Cache Aside
+## Common Caching Strategies
 
-This is the most common caching strategy, in this approach the cache works along with the database trying to reduce the hits on it as much as possible. The data is lazy loaded in the cache.
+### Cache Aside
 
-When the user sends a request for particular data. The system first looks for it in the cache. If present it’s simply returned from it. If not, the data is fetched from the database, the cache is updated, and is returned to the user.
+This is the most common caching strategy. Here, the cache works alongside the database to reduce database hits. Data is lazy loaded into the cache.
 
-This kind of strategy works best with read-heavy workloads. The kind of data that is not frequently updated is user profile data in a portal — his name, account number, etc.
+When a user requests specific data, the system first checks the cache. If the data is present, it’s returned directly. If not, the system fetches the data from the database, updates the cache, and returns the data to the user.
 
-The data in this strategy is written directly to the database. This means things between the cache and the database could get inconsistent.
+This strategy works well with read-heavy workloads, such as user profile data (e.g., name, account number) that isn’t frequently updated.
 
-To avoid this data on the cache has a TTL Time to Live. After that stipulated period the data is invalidated from the cache.
+However, this approach can lead to inconsistencies between the cache and the database. To mitigate this, cached data is assigned a `TTL` (Time to Live), after which it’s invalidated.
 
-## Read-Through
+### Read-Through
 
-This strategy is pretty similar to the cache Aside strategy with subtle differences in the Cache Aside strategy the system has to fetch information from the database if it is not found in the cache but in the Read-through strategy, the cache always stays consistent with the database. The cache library takes the onus of maintaining consistency with the back-end;
+This strategy is similar to Cache Aside but with one key difference: in Read-Through, the cache always stays consistent with the database. The cache library ensures consistency with the back-end.
 
-The information in this strategy too, is lazy loaded in the cache, only when the user requests it.
+Like Cache Aside, data is lazy loaded into the cache when first requested. Developers can also pre-load the cache with frequently requested data to reduce cache misses.
 
-So, for the first time when information is requested it results in a cache miss, the back-end has to update the cache while returning the response to the user.
+### Write-Through
 
-Though the developers can pre-load the cache with the information which is expected to be requested most by the users.
+In this strategy, all data written to the database goes through the cache. When data is written to the database, the cache is updated simultaneously.
 
-## Write-Through
+This ensures a high level of consistency between the cache and the database but adds some latency during write operations. This strategy is well-suited for write-heavy workloads, such as online multiplayer games.
 
-In this strategy, every piece of information written to the database goes through the cache. When the data is written to the DB, the cache is updated with it.
+### Write-Back
 
-This maintains high consistency between the cache and the database though it adds a little latency during the write operations as data is to be updated in the cache. This works well for write-heavy workloads like online massive multiplayer games.
+Write-Back caching optimizes costs by writing data directly to the cache instead of the database. After a delay (based on business logic), the cache writes the data to the database.
 
-This strategy is used with other caching strategies to achieve optimized performance.
+This approach is ideal for applications with heavy write operations, as it reduces the frequency of database writes and associated costs.
 
-## Write-Back
+However, if the cache fails before the database is updated, data loss can occur. This strategy is often combined with other caching strategies for optimal performance.
 
-It helps optimize costs significantly.
+## How to Implement Caching
 
-In the Write-back caching strategy, the data is directly written to the cache instead of the database. And the cache, after some delay as per the business logic, writes data to the database.
+Implementing caching depends on your chosen strategy. For example, when working with a database, you can create a unique key and cache data in Redis.
 
-If there are quite a heavy number of writes in the application. Developers can reduce the frequency of database writes to cut down the load & the associated costs.
+Here’s an example of caching in a service:
 
-A risk in this approach is if the cache fails before the DB is updated, the data might get lost. Again this strategy is used with other caching strategies to make the most out of these.
-
-## How to Cache
-
-It’s pretty straightforward; depending on your catching strategy while writing to or reading from the database, you can create a unique key and a cache in Redis.
-
-Example of using cache in service:
-
-``` csharp
+```csharp
 public async Task<int> CountByFilterAsync(ContentFilter filter)
 {
     // Get cache
@@ -100,51 +93,54 @@ public async Task<int> CountByFilterAsync(ContentFilter filter)
         await _redisCacheEngine.SetAsync(cacheKey, count, _ttlFromMinutes);
     return count;
 }
-
 ```
 
-It depends on your design to choose where to implement cache, my favorite approach is leveraging the [CQRS pipeline,](https://codewithmukesh.com/blog/caching-with-mediatr-in-aspnet-core/) to set Cache in Query requests and invalidate the Cache in Command requests.
+### Best Practices
 
-You can use [**CachedRepository Pattern**](https://stackoverflow.com/questions/3442102/repository-pattern-caching).
-
-Another good practice is using Event-Sourcing to raise an event after Commands and handle events asynchronous in another part of the application to invalidate the cache.
+- Use the [CQRS pipeline](https://codewithmukesh.com/blog/caching-with-mediatr-in-aspnet-core/) to set cache for Query requests and invalidate it for Command requests.
+- Implement the [Cached Repository Pattern](https://stackoverflow.com/questions/3442102/repository-pattern-caching).
+- Use Event Sourcing to raise events after Commands and asynchronously handle them to invalidate the cache.
 
 ## Nondeterministic Problem
 
-Definition:
+### Definition
 
-> _Nondeterministic functions result in different outputs each time they are called with a fixed set of input values. For example,_ `_GETDATE()_` _function, results in the current date and time value, always a different value._
+> _Nondeterministic functions produce different outputs each time they’re called with the same input values (e.g., the `_GETDATE()` function)._
 
-When you have a deterministic item whose data is always the same, you can get it from the database, put it in the cache and forget about it; after updating it in the database, you can invalidate or update the cache.
+For deterministic data that doesn’t change frequently, you can cache it and update or invalidate it when the database is updated.
 
-Things get complicated when you have nondeterministic data, for example, a list of contents. You get the first page of content and cache it, but maybe some contents get deleted or updated, or some other contents get added to the database; you can’t ever be sure.
+For nondeterministic data (e.g., a list of contents), caching becomes more complex. For instance, if you cache the first page of content, it might no longer be accurate as data is added, updated, or deleted in the database.
 
-The best approach I am aware of is using `time to live` to cache this kind of data. Then, you can start from the shortest `TTL` you can afford and increase it after understanding your user behavior, etc.
+The best approach for nondeterministic data is to use a `TTL`. Start with the shortest TTL you can afford and adjust it based on user behavior and requirements.
 
 ## Redis and StackExchange.Redis
 
-You can try to search for keys with specific prefixes and invalidate them, But the time complicity for this search is O(n); in general, it’s not a good idea; But Redis is extremely fast.
+Redis allows you to search for keys with specific prefixes and invalidate them. However, this operation has a time complexity of O(n), which might not be ideal for large datasets. Fortunately, Redis is extremely fast.
 
-as Redis docs say:
+As Redis docs state:
 
 > _While the time complexity for this operation is O(N), the constant times are fairly low. For example, Redis running on an entry-level laptop can scan a 1 million key database in 40 milliseconds._
 
-## Invalidation
+### Key Invalidation
 
-To invalidate all keys with the pattern with `StackExchange.Redis` you should first get all keys with the [Keys method](https://stackexchange.github.io/StackExchange.Redis/KeysValues). It uses [SCAN under the hood](https://redis.io/commands/scan)
+With `StackExchange.Redis`, you can invalidate keys by using the [Keys method](https://stackexchange.github.io/StackExchange.Redis/KeysValues), which uses [SCAN under the hood](https://redis.io/commands/scan).
 
-> _Since_ `_SCAN_` _commands allow for incremental iteration, returning only a small number of elements per call, they can be used in production without the downside of commands like_ `_KEYS_` _or_ `_SMEMBERS_` _that may block the server for a long time (even several seconds) when called against big collections of keys or elements._
+> _The_ `_SCAN_` _command allows incremental iteration, returning only a small number of elements per call. This makes it usable in production without the downsides of blocking commands like_ `_KEYS_` _or_ `_SMEMBERS_`.
 
-You must iterate over all keys, with help of the cursor, and get all keys that match the pattern. Again iterate over matched keys and delete them one by one.
+You must iterate over all keys using a cursor, match the desired pattern, and delete the matched keys one by one.
 
-If you care about performance, you can use the `set`. The idea is to put all keys associated with the pattern in `set` and delete them `set` to clear everything out.
+### Optimizing Performance
 
-## The problem with aggressive invalidation
+To improve performance, store all associated keys in a `set` and clear the `set` to invalidate everything at once.
 
-Invalidating all keys that match the pattern is not very efficient, for example, if you update one content, in this approach we delete all keys which associate with the content entity. as I mentioned above my preferred way for invalidation is the usage of `TTL` on nondeterministic data. With this approach we eliminate all the trouble of finding associated keys and invalidating them; unused query keys will expire after a short time. We just need to calibrate TTL to find the best one for each endpoint.
+## The Problem with Aggressive Invalidation
+
+Invalidating all keys matching a pattern can be inefficient. For example, updating one piece of content might result in deleting all keys associated with the content entity.
+
+Instead, use `TTL` for nondeterministic data to avoid these issues. With this approach, unused query keys automatically expire after a short time, eliminating the need to find and invalidate associated keys manually. Calibrate the TTL for each endpoint to achieve optimal results.
 
 ## Conclusion
 
-Be careful about caching. You can use a combination of these patterns to find a solution working for you.
+Be cautious when implementing caching. Use a combination of these strategies to find a solution that works for your specific needs.
 
 > _There are only two hard things in Computer Science: cache invalidation and naming things. — Phil Karlton_
