@@ -1,7 +1,8 @@
 ---
 title: "Programming Language Speed Doesn't Matter"
 date: 2025-07-26
-tags: ["backend","software","programming"]
+tags: ["backend","software","programming","web-development"]
+layout: "single"
 type: "en"
 ---
 When developing a web application, don't prioritize the speed of the programming language you use. The primary bottlenecks are typically network calls, followed by database calls.
