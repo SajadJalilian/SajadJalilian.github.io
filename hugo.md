@@ -11,4 +11,5 @@ hugo new content/fa-blog/my-first-farsi-post.md
 
 - Create a directory with exact same name of the post file without ".md" in "static/en-blog" or "static/fa-blog"
 - Add photo like this
-        [Plane](normal-distribution-graph.svg)
+
+![Plane](phto.jpg)
