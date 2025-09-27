@@ -12,4 +12,4 @@ I have ordered them based on how often I check them.
 - [Linkedin](https://www.linkedin.com/in/sajadjalilian)
 - e mail/ google meet: sajadjdev [at] gmail [dot] com
 - [twitter/x](https://twitter.com/Sajad_Jalilian)
-- [Schedule a meeting with me](https://tidycal.com/sajadjalilian)
+- [Schedule a meeting with me](https://tidycal.com/sajadj)
