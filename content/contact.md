@@ -6,6 +6,7 @@ layout: "single"
 
 #### You can contact me using these methods
 
-- Telegram: @ s4jadj [Linkedin](https://www.linkedin.com/in/sajadjalilian)
+- Telegram: @ s4jadj
+- [Linkedin](https://www.linkedin.com/in/sajadjalilian)
 - e mail/ google meet: sajadjdev [at] gmail [dot] com [twitter/x](https://twitter.com/Sajad_Jalilian)
 - [Schedule a meeting with me](https://tidycal.com/sajadj)
