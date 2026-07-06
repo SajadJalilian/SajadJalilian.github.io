@@ -1,5 +1,5 @@
 ---
-title: "Staring at a Wall"
+title: "بزرگ‌ترین مشکل بشر امروز"
 date: 2026-07-06T21:47:35+02:00
 type: "fa"
 tags: ["persian", "self-help","dopamine"]
