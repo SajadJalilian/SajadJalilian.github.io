@@ -20,7 +20,6 @@ ignoreErrors = ["error-remote-getjson"]
   
 
 [params]
-  twitter = 'Sajad_Jalilian'
   github = 'SajadJalilian'
   linkedin = 'sajadjalilian'
   rss = true
