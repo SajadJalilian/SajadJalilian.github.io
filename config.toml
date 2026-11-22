@@ -1,7 +1,5 @@
 baseURL = 'http://sajadjalilian.github.io/'
-languageCode = 'en-us'
 title = 'SJ blog'
-author = 'Sajad Jalilian'
 theme = 'hugo-paper'
 pagination.pagerSize = 50
 DefaultContentLanguage = "en"
@@ -9,6 +7,12 @@ enableInlineShortcodes = true
 # prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
 # See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
 ignoreErrors = ["error-remote-getjson"]
+
+[languages]
+  [languages.en]
+    locale = 'en-US'
+    label = 'English'
+    weight = 1
 
 [taxonomies]
   tag = "tags"
@@ -20,6 +24,9 @@ ignoreErrors = ["error-remote-getjson"]
   github = 'SajadJalilian'
   linkedin = 'sajadjalilian'
   rss = true
+
+  [params.author]
+    name = 'Sajad Jalilian'
 
 # needed to  render raw HTML (e.g. <sub>, <sup>, <kbd>, <mark>)
 [markup]
